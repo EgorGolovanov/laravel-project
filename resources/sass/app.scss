@@ -1,0 +1,76 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+.py-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    width: 40%;
+}
+
+#sort-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    width: 60%;
+}
+
+.item {
+    display: flex;   
+}
+
+.data-id,
+.data-query {
+    margin-right: 40px;
+}
+
+.list-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#form,
+#sort-form {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#query,
+#button {
+    margin: 10px;
+}
+
+.edit-form {
+    display: flex;
+}
+
+.hidden {
+    display: none;
+}
+
+.delete,
+.edit,
+.ok,
+.cancel {
+    background: #fff;
+	outline: none;
+	border: 0;
+}
