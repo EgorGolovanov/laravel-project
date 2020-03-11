@@ -22,6 +22,8 @@ Route::post('/', 'ListsController@add')->name('add-form');
 
 Route::get('/users/account', 'AccountController@index')->name('account');
 
+Route::post('/users/account', 'AccountController@upload')->name('upload-image');
+
 Route::post('/{id}', 'ListsController@edit')->name('edit');
 
 Route::get('/{id}', 'ListsController@delete')->name('delete');

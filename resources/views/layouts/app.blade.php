@@ -11,6 +11,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/script.js') }}"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -86,6 +87,5 @@
             @yield('myList')
         </main>
     </div>
-    <script src="{{ asset('js/script.js') }}"></script>
 </body>
 </html>

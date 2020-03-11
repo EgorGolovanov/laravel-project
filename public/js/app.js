@@ -49643,26 +49643,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/script.js":
-/*!********************************!*\
-  !*** ./resources/js/script.js ***!
-  \********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-document.querySelector('edit').addEventListener('click', function () {
-  $('.edit-form').removeClass('hidden');
-  $('.edit').addClass('hidden');
-  $('.delete').addClass('hidden');
-});
-document.querySelector('cancel').addEventListener('click', function () {
-  $('.edit-form').addClass('hidden');
-  $('.edit').removeClass('hidden');
-  $('.delete').removeClass('hidden');
-});
-
-/***/ }),
-
 /***/ "./resources/sass/app.scss":
 /*!*********************************!*\
   !*** ./resources/sass/app.scss ***!
@@ -49675,14 +49655,13 @@ document.querySelector('cancel').addEventListener('click', function () {
 /***/ }),
 
 /***/ 0:
-/*!**************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/js/script.js ./resources/sass/app.scss ***!
-  \**************************************************************************************/
+/*!*************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ***!
+  \*************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! /var/www/laravalProject/lists-laravel-project/resources/js/app.js */"./resources/js/app.js");
-__webpack_require__(/*! /var/www/laravalProject/lists-laravel-project/resources/js/script.js */"./resources/js/script.js");
 module.exports = __webpack_require__(/*! /var/www/laravalProject/lists-laravel-project/resources/sass/app.scss */"./resources/sass/app.scss");
 
 

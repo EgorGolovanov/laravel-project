@@ -10882,6 +10882,10 @@ a.text-dark:focus {
   }
 }
 
+img {
+  width: 30%;
+}
+
 .py-4 {
   display: flex;
   flex-direction: column;
@@ -10906,6 +10910,18 @@ a.text-dark:focus {
   width: 60%;
 }
 
+#account-form {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.btn {
+  margin-bottom: 30px;
+}
+
 .item {
   display: flex;
 }
@@ -10915,7 +10931,8 @@ a.text-dark:focus {
   margin-right: 40px;
 }
 
-.list-container {
+.list-container,
+.account-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -10923,7 +10940,8 @@ a.text-dark:focus {
 }
 
 #form,
-#sort-form {
+#sort-form,
+#account-form {
   border: 1px solid #ccc;
   border-radius: 5px;
 }
@@ -10934,10 +10952,6 @@ a.text-dark:focus {
 }
 
 .edit-form {
-  display: flex;
-}
-
-.hidden {
   display: none;
 }
 
@@ -10948,5 +10962,23 @@ a.text-dark:focus {
   background: #fff;
   outline: none;
   border: 0;
+}
+
+.cancel-link {
+  display: none;
+}
+
+.edit-mode .cancel-link {
+  display: block;
+}
+
+.edit-mode .edit-form {
+  display: flex;
+}
+
+.edit-mode .data-query,
+.edit-mode .edit,
+.edit-mode .delete-link {
+  display: none;
 }
 

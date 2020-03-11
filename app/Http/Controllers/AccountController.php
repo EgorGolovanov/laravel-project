@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
+use Auth;
 
 class AccountController extends Controller
 {
@@ -23,6 +25,19 @@ class AccountController extends Controller
      */
     public function index()
     {
-        return view('account');
+        return view('account', ['path' => Auth::user()->path]);
+    }
+
+
+    public function upload(Request $req) {
+        if($req->file('image')) {
+            $path = $req->file('image')->store('uploads', 'public');
+            $user = User::find(Auth::user()->id);
+
+            $user->path = $path;
+
+            $user->save();
+        }
+        return redirect()->route('account');
     }
 }

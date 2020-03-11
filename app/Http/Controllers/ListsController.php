@@ -24,7 +24,7 @@ class ListsController extends Controller {
      */
     public function index() {
         $intent = new Intent;
-        return view('lists', ['data' => $intent->where('user_id', '=', Auth::user()->id)->get()]);
+        return view('lists', ['data' => $intent->where('user_id', '=', Auth::user()->id)->orderBy('id', 'asc')->get()]);
     }
 
     /**
@@ -38,8 +38,7 @@ class ListsController extends Controller {
         $intent->user_id = Auth::user()->id;
 
         $intent->save();
-
-        return view('lists', ['data' => $intent->where('user_id', '=', Auth::user()->id)->get()]);
+        return redirect()->route('lists');
     }
 
     public function edit($id, IntentRequest $req) {
@@ -48,9 +47,13 @@ class ListsController extends Controller {
         $intent->user_id = Auth::user()->id;
 
         $intent->save();
+        return redirect()->route('lists');
     }
 
     public function delete($id) {
         Intent::find($id)->delete();
+
+        $intent = new Intent;
+        return redirect()->route('lists');
     }
 }
