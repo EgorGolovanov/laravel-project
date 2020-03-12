@@ -94,14 +94,20 @@
 /***/ (function(module, exports) {
 
 window.onload = function () {
-  document.getElementById('editbutton').addEventListener('click', function (e) {
-    var parent = e.target.parentNode;
-    parent.classList.add('edit-mode');
-  });
-  document.getElementById('cancelbutton').addEventListener('click', function (e) {
-    var parent = e.target.parentNode;
-    parent.classList.remove('edit-mode');
-  }); //слушатель для обработки событий при выборе сортировки списка
+  var editbuttonList = document.getElementsByClassName('edit');
+  var cancelbuttonList = document.getElementsByClassName('cancel-link');
+
+  for (var i = 0; i < editbuttonList.length; i++) {
+    editbuttonList[i].addEventListener('click', function (e) {
+      var parent = e.target.parentNode;
+      parent.classList.add('edit-mode');
+    });
+    cancelbuttonList[i].addEventListener('click', function (e) {
+      var parent = e.target.parentNode;
+      parent.classList.remove('edit-mode');
+    });
+  } //слушатель для обработки событий при выборе сортировки списка
+
 
   document.addEventListener("click", function (e) {
     if (e.target && e.target.matches("input[name='sort-radiobutton']")) {

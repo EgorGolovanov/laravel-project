@@ -1,13 +1,17 @@
 window.onload=function() {
-    document.getElementById('editbutton').addEventListener('click', function(e) {
-        let parent = e.target.parentNode;
-        parent.classList.add('edit-mode');
-    });
+    let editbuttonList = document.getElementsByClassName('edit');
+    let cancelbuttonList = document.getElementsByClassName('cancel-link');
     
-    document.getElementById('cancelbutton').addEventListener('click', function(e) {
-        let parent = e.target.parentNode;
-        parent.classList.remove('edit-mode');
-    });
+    for (let i = 0; i < editbuttonList.length; i++) {
+        editbuttonList[i].addEventListener('click', function(e) {
+            let parent = e.target.parentNode;
+            parent.classList.add('edit-mode');
+        });
+        cancelbuttonList[i].addEventListener('click', function(e) {
+            let parent = e.target.parentNode;
+            parent.classList.remove('edit-mode');
+        });
+    }
 
     //слушатель для обработки событий при выборе сортировки списка
     document.addEventListener("click", function(e) {
